@@ -27,5 +27,5 @@ sed -i "s/\$CONTAINER_NAME/$CONTAINER_NAME/g" $PWD/$1/docker-compose.yml
 sed -i "s/\$LOGSTASH_VERSION/$LOGSTASH_VERSION/g" $PWD/$1/docker-compose.yml
 
 cd $1
-docker-compose up --build --detach
+docker-compose up --build -d
 cd ..
