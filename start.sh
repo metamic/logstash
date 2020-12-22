@@ -16,8 +16,7 @@ CONTAINER_NAME=$1
 if [ ! -d "$PWD/$1" ]; then
     cp -r $PWD/conf/logstash $PWD/$1
 else
-    echo "'$1' already exists"
-    exit 1
+    echo "'$1' already exists. using exist".
 fi
 
 sed -i "s#\$ELASTICSEARCH_HOST#$ELASTICSEARCH_HOST#g" $PWD/$1/config/logstash.yml
