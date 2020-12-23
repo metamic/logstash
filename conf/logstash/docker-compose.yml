@@ -17,6 +17,10 @@ services:
         source: "${PWD}/pipeline"
         target: /usr/share/logstash/pipeline
         read_only: true
+      - type: bind
+        source: "${PWD}/cert"
+        target: /cert
+        read_only: true
     ports:
       - "5001:5001/tcp"
       - "5001:5001/udp"
